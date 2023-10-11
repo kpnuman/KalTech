@@ -526,6 +526,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  .main-box1 {
+    margin-left: 12rem;
+  }
 
   .navbar>.container,
   .navbar>.container-fluid {
