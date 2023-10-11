@@ -546,7 +546,7 @@ header {
     display: flex;
     /* flex-direction: column; */
     /* width: 50px; */
-    gap: 15px;
+    gap: 30px;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -558,7 +558,7 @@ header {
   }
 
   .parent img {
-    width: 100px;
+    width: 85px;
     /* padding-bottom: 20px; */
     margin-bottom: 30px;
     display: flex;
