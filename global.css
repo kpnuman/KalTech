@@ -721,3 +721,9 @@ header {
     padding: 0px 0px 0px 20px;
   }
 }
+
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 50px !important;
+}
