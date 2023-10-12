@@ -448,7 +448,7 @@ header::before {
   /* background-color: white !important;
   border-radius: 10px;
   */
-  margin-top: 70px;
+  margin-top: 70px !important;
   margin-bottom: 5rem;
   width: 90%;
   height: 230px;
@@ -521,12 +521,13 @@ header::before {
   font-size: 16px;
   line-height: 10px;
   /* or 250% */
-
+  text-decoration: none;
   color: #20282B;
 }
 
 .portfolio-img {
   display: flex;
+  text-decoration: none;
 }
 
 header {
@@ -726,4 +727,17 @@ header {
 .owl-carousel .owl-item img {
   display: block;
   width: 50px !important;
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+.fa-chevron-left:before {
+  padding-right: 20px;
+}
+
+.owl-dots .owl-dot {
+  background-color: black;
+  /* Change this to the color you want */
 }
