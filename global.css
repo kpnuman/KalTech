@@ -40,7 +40,7 @@ body {
 
 .navbar-nav .nav-item .nav-link {
   color: #D9D9D9;
-  font-size: 15px;
+  font-size: 20px;
   margin-right: 30px;
 }
 
@@ -166,10 +166,9 @@ header::before {
   font-family: 'Outfit';
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   text-align: center;
-
   color: #FFFFFF;
 }
 
@@ -179,6 +178,16 @@ header::before {
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
+  /* padding-top: 10rem; */
+  /* line-height: 64px; */
+}
+
+.why-section {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  padding-top: 10rem;
   /* line-height: 64px; */
 }
 
@@ -267,7 +276,7 @@ header::before {
   margin-bottom: 50px;
 }
 
-.center-box {
+.box:hover {
   padding: 30px;
   box-sizing: border-box;
   background: #FFFFFF;
@@ -275,6 +284,15 @@ header::before {
   box-shadow: 0px 40px 55px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
 }
+
+/* .center-box {
+  padding: 30px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0px 40px 55px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+} */
 
 .box-para {
   font-size: 15px;
@@ -572,6 +590,11 @@ header {
 
   .why {
     width: 605px;
+    padding-top: 3rem !important;
+  }
+
+  .why-section {
+    padding-top: 5rem !important;
   }
 
   .third-part {
@@ -695,6 +718,6 @@ header {
   }
 
   .pare .flex-column {
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px 20px;
   }
 }

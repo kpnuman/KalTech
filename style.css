@@ -48590,3 +48590,123 @@ footer.bg-dark.angled.upper-start:before {
     overflow: none !important;
     border: 1px solid red !important;
 }
+
+.navbar-bg {
+    background: linear-gradient(180deg, #3F0F1A 0%, #050116 100%);
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+}
+
+.set-in-mob-2 {
+    /* margin-top: -10px; */
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+    flex-direction: row !important;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-expand-lg .navbar-brand {
+    /* /* padding-top: 1.2rem; */
+    /* padding-bottom: 1.2rem; */
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Outfit' !important;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-expand-lg .navbar-brand {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        font-size: 30px;
+        font-family: 'Outfit' !important;
+        font-weight: 600;
+        font-style: normal;
+    }
+}
+
+.navbar-expand-lg .navbar-brand {
+    /* padding-top: 1.2rem;
+     padding-bottom: 1.2rem;
+     font-size: 35px; */
+    font-family: 'Outfit' !important;
+}
+
+.footer {
+    margin-top: 0rem;
+    background-color: #ffffff;
+}
+
+.first-part {
+    height: 190px;
+    background: #BC263A;
+    border-radius: 30px;
+}
+
+.pare {
+    border: 1px solid #C7C9CA;
+    gap: 40px;
+}
+
+.footer-heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    /* identical to box height, or 200% */
+
+    color: #BC263A;
+}
+
+.footer-text {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 10px;
+    /* or 250% */
+
+    color: #20282B;
+}
+
+
+@media(max-width:768px) {
+    .first-part {
+        height: 150px;
+        background: #BC263A;
+        border-radius: 30px;
+    }
+
+    .pare {
+        border: 1px solid #C7C9CA;
+        gap: 0px;
+        height: 500px;
+        /* width: 666px; */
+    }
+
+    .footer-heading {
+        margin-top: 0px !important;
+    }
+
+    .footer-text {
+        margin-bottom: 20px !important;
+    }
+
+    .pare .flex-column {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .py-about-us-belief {
+        padding-top: 0px !important;
+    }
+
+    .team-img {
+        padding-right: 20px;
+    }
+}
