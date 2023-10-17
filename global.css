@@ -7,7 +7,7 @@
 body {
   @apply leading-[normal] m-0;
   overflow-x: hidden;
-  font-family: 'Outfit' !important;
+  font-family: "Outfit" !important;
 }
 
 *,
@@ -27,7 +27,7 @@ body {
   padding: 10px;
   margin-top: 4px;
   background-color: #312964;
-  color: #EBEBEB;
+  color: #ebebeb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #D9D9D9;
+  color: #d9d9d9;
   font-size: 20px;
   margin-right: 30px;
 }
@@ -50,21 +50,20 @@ body {
 }
 
 .main-heading-home {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
   font-size: 65px;
   line-height: 82px;
   text-align: center;
-
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 40px;
 
   /* border: 1px solid #000000; */
 }
 
 .main-para {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -85,17 +84,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   border-radius: 5px;
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #BC263A !important;
+  background-color: #bc263a !important;
   color: white !important;
   /* padding: 30px 10px; */
 
-  font-family: 'Poppins' !important;
+  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 18px !important;
@@ -125,7 +124,7 @@ header::before {
 }
 
 .main-section {
-  background: linear-gradient(180deg, #3F0F1A -1.83%, #050116 100%);
+  background: linear-gradient(180deg, #3f0f1a -1.83%, #050116 100%);
   height: 735px;
   align-items: self-start;
 }
@@ -152,29 +151,29 @@ header::before {
 }
 
 .box-heading {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 63px;
   text-align: center;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .box-text {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Main Part CSS */
 .why {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -183,7 +182,7 @@ header::before {
 }
 
 .why-section {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -192,30 +191,29 @@ header::before {
 }
 
 .kal {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 64px;
   /* identical to box height, or 128% */
 
-  color: #BC263A;
+  color: #bc263a;
 }
 
 .logo-text {
-  font-family: 'Outfit' !important;
+  font-family: "Outfit" !important;
   font-style: normal !important;
   font-weight: 600 !important;
   font-size: 37.4697px !important;
   /* line-height: 47px !important; */
 
   /* RED */
-  color: #BC263A !important;
+  color: #bc263a !important;
 }
 
-
 .menu {
-  font-family: 'Poppins' !important;
+  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 700 !important;
   font-size: 16px !important;
@@ -223,8 +221,10 @@ header::before {
 }
 
 .mask-image {
-  margin-top: 40px;
-  height: 516px;
+  margin-top: 170px;
+  height: 330px;
+  border-radius: 20px;
+
   /* margin-left: 60px; */
   /* left: 50px; */
   top: 15px;
@@ -232,7 +232,7 @@ header::before {
 }
 
 .p1 {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -244,7 +244,7 @@ header::before {
 
 .p2 {
   /* padding-top: 20px !important; */
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -254,7 +254,7 @@ header::before {
 
 .p3 {
   /* padding-top: 20px !important; */
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -279,8 +279,8 @@ header::before {
 .box:hover {
   padding: 30px;
   box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  background: #ffffff;
+  border: 1px solid #dddddd;
   box-shadow: 0px 40px 55px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
 }
@@ -304,19 +304,19 @@ header::before {
   /* margin-left: 40%; */
   text-align: center;
   margin-bottom: 50px;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 64px;
   /* identical to box height, or 128% */
 
-  color: #20282B;
+  color: #20282b;
 }
 
 .expertise {
-  color: #BC263A;
-  font-family: 'Outfit';
+  color: #bc263a;
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -332,7 +332,7 @@ header::before {
   justify-content: center;
   gap: 10px;
   flex-direction: column;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -340,12 +340,12 @@ header::before {
   /* identical to box height */
   text-align: center;
 
-  color: #20282B;
+  color: #20282b;
 }
 
 .offer-section {
   margin-top: 50px;
-  background: linear-gradient(360deg, #3F0F1A -1.83%, #050116 100%);
+  background: linear-gradient(360deg, #3f0f1a -1.83%, #050116 100%);
   /* transform: rotate(-180deg); */
   height: 1055px;
   padding-right: 25px;
@@ -356,13 +356,13 @@ header::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 650px;
+  width: 900px;
   padding-bottom: 3rem;
   padding-top: 1rem;
   font-size: 13px;
   text-align: center;
   margin: auto;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -370,11 +370,10 @@ header::before {
   /* or 150% */
   text-align: center;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .offer-heading {
   /* color: red; */
@@ -383,14 +382,14 @@ header::before {
   justify-content: center;
   padding-top: 50px;
 
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
   font-size: 65px;
   line-height: 64px;
   /* identical to box height, or 98% */
 
-  color: #BC263A;
+  color: #bc263a;
 }
 
 .sub-heading {
@@ -399,25 +398,25 @@ header::before {
   width: 300px;
   color: white;
   text-align: center;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 27px;
   line-height: 40px;
   text-align: center;
   padding-bottom: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .sub-heading-1 {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   /* identical to box height */
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .section {
@@ -429,20 +428,19 @@ header::before {
 
 .offer-paras {
   font-size: 13px;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .offer-img {
   height: 50px;
   padding-right: 20px;
 }
-
 
 .portfolio {
   /* background-color: white !important;
@@ -452,8 +450,8 @@ header::before {
   margin-bottom: 5rem;
   width: 90%;
   height: 230px;
-  background: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  background: #ffffff;
+  border: 1px solid #dddddd;
   box-shadow: 0px 40px 55px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
   /* transform: rotate(180deg); */
@@ -463,14 +461,14 @@ header::before {
 }
 
 .portfolio-heading {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 64px;
   /* identical to box height, or 128% */
 
-  color: #20282B;
+  color: #20282b;
 }
 
 .parent {
@@ -478,7 +476,6 @@ header::before {
   align-items: center;
   justify-content: space-evenly;
   /* gap: 10px; */
-
 }
 
 .parent img {
@@ -494,35 +491,35 @@ header::before {
 
 .first-part {
   height: 190px;
-  background: #BC263A;
+  background: #bc263a;
   border-radius: 30px;
 }
 
 .pare {
-  border: 1px solid #C7C9CA;
+  border: 1px solid #c7c9ca;
   gap: 40px;
 }
 
 .footer-heading {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
   /* identical to box height, or 200% */
 
-  color: #BC263A;
+  color: #bc263a;
 }
 
 .footer-text {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 10px;
   /* or 250% */
   text-decoration: none;
-  color: #20282B;
+  color: #20282b;
 }
 
 .portfolio-img {
@@ -549,8 +546,8 @@ header {
     margin-left: 11.5rem;
   }
 
-  .navbar>.container,
-  .navbar>.container-fluid {
+  .navbar > .container,
+  .navbar > .container-fluid {
     justify-content: center !important;
   }
 
@@ -619,7 +616,7 @@ header {
   }
 
   .col-xs-12 {
-    text-align: center;
+    text-align: -webkit-center;
   }
 
   .expertise-heading {
@@ -699,12 +696,12 @@ header {
 
   .first-part {
     height: 150px;
-    background: #BC263A;
+    background: #bc263a;
     border-radius: 30px;
   }
 
   .pare {
-    border: 1px solid #C7C9CA;
+    border: 1px solid #c7c9ca;
     gap: 0px;
     height: 500px;
     width: 666px;
@@ -723,7 +720,6 @@ header {
   }
 }
 
-
 .owl-carousel .owl-item img {
   display: block;
   width: 50px !important;
@@ -740,4 +736,16 @@ header {
 .owl-dots .owl-dot {
   background-color: black;
   /* Change this to the color you want */
+}
+
+.nav-item .nav-link a:hover {
+  color: red;
+}
+
+.rounded-some-element {
+  padding-right: 20px;
+  height:200px;
+  border-radius: 30px !important; 
+  display: none;
+
 }
