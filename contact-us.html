@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <form class="form" action="assets/php/form.php" id="contact_form">
+                        <form class="form" id="contact_form">
                             <div class="input-item">
                                 <input name="name" type="text" placeholder="Name">
                             </div>
@@ -215,26 +215,34 @@
 
             $('.status').text('Message sending in progress, please wait.');
             /* get the action attribute from the <form action=""> element */
-            var form = $(this),
-                url = form.attr('action');
+            const url = 'http://localhost:8000/notification/public/email';
+            const token= '6bf4b01a8284fc3261e99be9d478a4eab1d9d2cc4ae1fae85cae2ea0e766b337'
             let formInfo = {
                 name: $('[name="name"]').val(),
                 email: $('[name="email"]').val(),
-                phone: $('[name="phone"]').val(),
+                number: $('[name="phone"]').val(),
                 message: $('[name="message"]').val(),
-                for: 'contact'
+                source: 'kaltech'
             }
 
             $.ajax({
                 method: 'POST',
                 url: url,
                 data: formInfo,
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                },
                 success: function (response) {
+                    if(response.status === 400) {
+                        $('.status').text('Message did not send. Please try again later');
+                        return;
+                    }
+
                     $("#contact_form")[0].reset();
                     $('.status').text('Message successfully sent.');
                 },
                 error: function () {
-                    $('.status').text('Message did not send. Please try again later.');
+                    $('.status').text('Message did not send. Please try again later');
                 }
             });
         });
