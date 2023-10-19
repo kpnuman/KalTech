@@ -240,6 +240,10 @@
 
                     $("#contact_form")[0].reset();
                     $('.status').text('Message successfully sent.');
+
+                    setTimeout(()=>{
+                        $('.status').text('');
+                    },5000)
                 },
                 error: function () {
                     $('.status').text('Message did not send. Please try again later');
