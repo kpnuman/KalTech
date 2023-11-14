@@ -191,67 +191,131 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contact_form').addEventListener('submit', function (event) {
+                event.preventDefault();
 
-        /* attach a submit handler to the form */
-        $("#contact_form").submit(function (event) {
+                let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
 
-            /* stop form from submitting normally */
-            event.preventDefault();
-
-            let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
-
-            // Validation;
-            if ($('[name="name"]').val() == "" || $('[name="email"]').val() == "" || $('[name="phone"]').val() == "" || $('[name="message"]').val() == "") {
-                $('.status').text('All fields are required.');
-                return;
-            }
-
-
-            if (regex.test($('[name="email"]').val()) == false) {
-                $('.status').text('Invalid email.');
-                return;
-            }
-
-
-            $('.status').text('Message sending in progress, please wait.');
-            /* get the action attribute from the <form action=""> element */
-            const url = 'https://portal.kalpayfinancials.com/notification/public/email';
-            const token= '6bf4b01a8284fc3261e99be9d478a4eab1d9d2cc4ae1fae85cae2ea0e766b337'
-            let formInfo = {
-                name: $('[name="name"]').val(),
-                email: $('[name="email"]').val(),
-                number: $('[name="phone"]').val(),
-                message: $('[name="message"]').val(),
-                source: 'kaltech'
-            }
-
-            $.ajax({
-                method: 'POST',
-                url: url,
-                data: formInfo,
-                headers: {
-                    'Authorization': 'Bearer ' + token
-                },
-                success: function (response) {
-                    if(response.status === 400) {
-                        $('.status').text('Message did not send. Please try again later');
-                        return;
-                    }
-
-                    $("#contact_form")[0].reset();
-                    $('.status').text('Message successfully sent.');
-
-                    setTimeout(()=>{
-                        $('.status').text('');
-                    },5000)
-                },
-                error: function () {
-                    $('.status').text('Message did not send. Please try again later');
+                // Validation
+                if (document.getElementsByName('name')[0].value === "" ||
+                    document.getElementsByName('email')[0].value === "" ||
+                    document.getElementsByName('phone')[0].value === "" ||
+                    document.getElementsByName('message')[0].value === "") {
+                    document.querySelector('.status').textContent = 'All fields are required.';
+                    return;
                 }
+
+                if (regex.test(document.getElementsByName('email')[0].value) === false) {
+                    document.querySelector('.status').textContent = 'Invalid email.';
+                    return;
+                }
+
+                document.querySelector('.status').textContent = 'Message sending in progress, please wait.';
+                const url = 'https://portal.kalpayfinancials.com/notification/public/email';
+                const token = '6bf4b01a8284fc3261e99be9d478a4eab1d9d2cc4ae1fae85cae2ea0e766b337'; // Replace 'YOUR_TOKEN' with your actual token
+
+                let formInfo = {
+                    name: document.getElementsByName('name')[0].value,
+                    email: document.getElementsByName('email')[0].value,
+                    number: document.getElementsByName('phone')[0].value,
+                    message: document.getElementsByName('message')[0].value,
+                    source: 'kaltech'
+                };
+
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    },
+                    body: JSON.stringify(formInfo)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.statusCode === 400) {
+                            document.querySelector('.status').textContent = 'Message did not send. Please try again later';
+                            return;
+                        }
+
+                        document.getElementById('contact_form').reset();
+                        document.querySelector('.status').textContent = 'Message successfully sent.';
+
+                        setTimeout(() => {
+                            document.querySelector('.status').textContent = '';
+                        }, 5000);
+                    })
+                    .catch(error => {
+                        document.querySelector('.status').textContent = 'Message did not send. Please try again later';
+                    });
             });
         });
-
     </script>
+
+    <!--    <script>-->
+
+<!--        /* attach a submit handler to the form */-->
+<!--        $(document).ready(function() {-->
+<!--            $('#contact_form').submit(function(event) {-->
+<!--                /* stop form from submitting normally */-->
+<!--                event.preventDefault();-->
+
+<!--                let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');-->
+
+<!--                // Validation;-->
+<!--                if ($('[name="name"]').val() == "" || $('[name="email"]').val() == "" || $('[name="phone"]').val() == "" || $('[name="message"]').val() == "") {-->
+<!--                    $('.status').text('All fields are required.');-->
+<!--                    return;-->
+<!--                }-->
+
+<!--                if (regex.test($('[name="email"]').val()) == false) {-->
+<!--                    $('.status').text('Invalid email.');-->
+<!--                    return;-->
+<!--                }-->
+
+<!--                $('.status').text('Message sending in progress, please wait.');-->
+<!--                /* get the action attribute from the <form action=""> element */-->
+<!--                const url = 'https://portal.kalpayfinancials.com/notification/public/email';-->
+<!--                const token = 'YOUR_TOKEN'; // Replace 'YOUR_TOKEN' with your actual token-->
+
+<!--                let formInfo = {-->
+<!--                    name: $('[name="name"]').val(),-->
+<!--                    email: $('[name="email"]').val(),-->
+<!--                    number: $('[name="phone"]').val(),-->
+<!--                    message: $('[name="message"]').val(),-->
+<!--                    source: 'kaltech'-->
+<!--                }-->
+
+<!--                $.ajax({-->
+<!--                    method: 'POST',-->
+<!--                    url: url,-->
+<!--                    data: formInfo,-->
+<!--                    headers: {-->
+<!--                        'Authorization': 'Bearer ' + token-->
+<!--                    },-->
+<!--                    success: function(response) {-->
+<!--                        if (response.status === 400) {-->
+<!--                            $('.status').text('Message did not send. Please try again later');-->
+<!--                            return;-->
+<!--                        }-->
+
+<!--                        $("#contact_form")[0].reset();-->
+<!--                        $('.status').text('Message successfully sent.');-->
+
+<!--                        setTimeout(() => {-->
+<!--                            $('.status').text('');-->
+<!--                        }, 5000)-->
+<!--                    },-->
+<!--                    error: function() {-->
+<!--                        $('.status').text('Message did not send. Please try again later');-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+<!--        });-->
+
+
+<!--    </script>-->
 
     <script type="module">
         // Import the functions you need from the SDKs you need
